@@ -1,21 +1,34 @@
 html, body #background { 
   width: 100vw;
   min-height: 100vh;
-  background-color: #000000;
+  background-color: rgb(0, 0, 0);
+}
+@keyframes test {
+    from {color:rgb(47, 211, 211);}
+    to {color:rgb(255, 159, 175);}
+}
+.game-header {
+    animation-name: test;
+    animation-direction: alternate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 h1 {
     font-size: 100px;
     font-style: italic;
     text-align: center;
-    color: rgb(47, 211, 211);
 }
 p {
     font-size: 35px;
     font-style: italic;
     text-align: center;
     color: rgb(47, 211, 211);
+    animation-name: test;
+    animation-direction: alternate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
-.buttons {
+.game-buttons {
     margin-top: 40px;
     position: absolute;
     top: 50%;
@@ -24,17 +37,24 @@ p {
     transform: translate(-50%, -50%);
 }
 .button {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin: 20px;
+    border: solid;
+    background-color:rgba(255, 255, 255, 0.800);
 }
-.score {
+.game-scores {
     font-size: 25px;
     font-style: italic;
     text-align: center;
     color: rgb(47, 211, 211);
     margin-top: 350px;
 }
-.player-score {
-    padding: 200px 200px;
+img {
+    width: 100px;
+    height: 100px;
+    color: white;
+}
+.button:hover {
+    background-color:rgba(255, 255, 255, 0.925);
 }
