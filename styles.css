@@ -1,29 +1,40 @@
+html, body #background { 
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #000000;
+}
 h1 {
     font-size: 100px;
     font-style: italic;
     text-align: center;
-    color: blue;
+    color: rgb(47, 211, 211);
 }
-.c1 {
-    height: 200px;
-    position: relative;
-    border: 3px solid blue; 
-    padding-bottom: 50px;
-}
-.c2 {
-    height: 50px;
-}
-.c3 {
-    height: 600px;
-    position: relative;
-    border: 3px solid green; 
-    background-color: black;
+p {
+    font-size: 35px;
+    font-style: italic;
+    text-align: center;
+    color: rgb(47, 211, 211);
 }
 .buttons {
-    margin: 0;
+    margin-top: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+.button {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.score {
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+    color: rgb(47, 211, 211);
+    margin-top: 350px;
+}
+.player-score {
+    padding: 200px 200px;
 }
