@@ -20,63 +20,64 @@ function playRound(playerSelection, computerSelection) {
             return tie;
         }
         else if (computerSelectFormatStr === "scissors") {
-            console.log("Player wins");
+            console.log("Player wins round");
             return playerWins;
         }
         else {
-            console.log("Computer wins");
+            console.log("Computer wins round");
             return computerWins;
         }
     }
     // Player chooses paper
     else if (playerSelectFormatStr === "paper") {
         if (computerSelectFormatStr === "paper") {
-            console.log("Tie");
+            console.log("Tie round");
             return tie;
         }
         else if (computerSelectFormatStr === "rock") {
-            console.log("Player wins");
+            console.log("Player wins round");
             return playerWins;
         }
         else {
-            console.log("Computer wins");
+            console.log("Computer wins round");
             return computerWins;
         }
     }
     // Player chooses scissors
     else {
         if (computerSelectFormatStr === "scissors") {
-            console.log("Tie");
+            console.log("Tie round");
             return tie;
         }
         else if (computerSelectFormatStr === "paper") {
-            console.log("Player wins");
+            console.log("Player wins round");
             return playerWins;
         }
         else {
-            console.log("Computer wins");
+            console.log("Computer wins round");
             return computerWins;
         }
     }
 }
 
-function playGame() {
+function game() {
+    const numOfRounds = 5;
     let playerScore = 0;
     let computerScore = 0;
     let flag = -1;
 
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < numOfRounds; i++) {
         console.log("Round " + (i + 1));
-        flag = playRound(prompt("Enter rock, paper, or scissors: "), computerPlay());
-        if (flag === 1) {
+        flag = playRound(prompt("Enter your weapon choice: "), computerPlay());
+        if (flag == 1) {
             playerScore++;
         }
-        else if (flag === 2) {
+        else if (flag == 2) {
             computerScore++;
         }
     }
 
-    if (playerScore === computerScore) {
+    if (playerScore == computerScore) {
         console.log("Tie game")
     }
     else if (playerScore > computerScore) {
@@ -86,5 +87,3 @@ function playGame() {
         console.log("Computer wins game")
     }
 }
-
-
