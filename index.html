@@ -3,21 +3,21 @@
     <title>Rock Paper Scissors</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="#">
+    <script src="rps.js"></script>
 </head>
 <body>
-    <div class="game-header">
+    <header>
         <h1>Rock Paper Scissors</h1>
         <p>Pick a weapon to start playing!</p>
-    </div>
+    </header>
     <div class="game-buttons">
-        <button id="rock" class="button"><img src="rock.png"></button>
-        <button id="paper" class="button"><img src="paper.png"></button>
-        <button id="scissors" class="button"><img src="scissors.png"></button>
+        <input id="rock" class="button" type="image" src="rock.png">
+        <input id="paper" class="button" type="image" src="paper.png">
+        <input id="scissors" class="button" type="image" src="scissors.png">
     </div>
     <div class="game-scores">
-        <label class="player-score">Player Score</label>
-        <label class="computer-score">Computer Score</label>
-
+        <label id="player-score">Player Score</label>
+        <label id="computer-score">Computer Score</label>
     </div>
-    <script src="rps.js"></script>
 </body>
